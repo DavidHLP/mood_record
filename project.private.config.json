@@ -1,0 +1,9 @@
+{
+  "description": "每日心情记录",
+  "projectname": "mood_record",
+  "setting": {
+    "compileHotReLoad": true,
+    "urlCheck": false
+  },
+  "libVersion": "3.7.12"
+}

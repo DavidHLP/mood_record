@@ -1,0 +1,101 @@
+/* index.wxss */
+.header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+
+.date {
+  font-size: 28rpx;
+  color: #999;
+  margin-bottom: 10rpx;
+}
+
+.title {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.today-mood {
+  padding: 20rpx 0;
+}
+
+.mood-info {
+  margin-bottom: 20rpx;
+}
+
+.mood-icon-large {
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+}
+
+.mood-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mood-name-large {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8rpx;
+}
+
+.mood-content {
+  font-size: 28rpx;
+  color: #666;
+  line-height: 1.6;
+  margin: 20rpx 0;
+}
+
+.activity-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 16rpx;
+}
+
+.more {
+  font-size: 24rpx;
+  color: #58adf5;
+  margin-left: auto;
+}
+
+.record-item {
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #eee;
+}
+
+.record-item:last-child {
+  border-bottom: none;
+}
+
+.mood-icon-small {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 16rpx;
+}
+
+.record-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.record-mood {
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 6rpx;
+}
+
+.record-content {
+  font-size: 26rpx;
+  color: #666;
+  margin-top: 12rpx;
+  margin-left: 76rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+} 

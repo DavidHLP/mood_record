@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.wxml": "html",
+        "*.wxss": "css"
+    },
+    "cursor.general.disableHttp2": true
+}

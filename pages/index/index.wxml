@@ -1,0 +1,64 @@
+<view class="container">
+  <view class="header">
+    <view class="date">{{currentDate}}</view>
+    <view class="title">今天感觉如何？</view>
+  </view>
+
+  <view class="card" wx:if="{{todayMood}}">
+    <view class="section-title">今日心情</view>
+    <view class="today-mood">
+      <view class="mood-info flex-row">
+        <image class="mood-icon-large" src="{{todayMood.moodInfo.icon}}"></image>
+        <view class="mood-detail">
+          <view class="mood-name-large">{{todayMood.moodInfo.name}}</view>
+          <view class="datetime">{{todayMood.date}}</view>
+        </view>
+      </view>
+      <view class="mood-content" wx:if="{{todayMood.content}}">
+        {{todayMood.content}}
+      </view>
+      <view class="activity-tags" wx:if="{{todayMood.activities && todayMood.activities.length > 0}}">
+        <view class="tag" wx:for="{{todayMood.activities}}" wx:key="id" style="background-color: #e6f3ff; color: #58adf5;">
+          {{item.name}}
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="card" wx:else>
+    <view class="section-title">选择今日心情</view>
+    <view class="mood-grid">
+      <view class="mood-item" wx:for="{{moodList}}" wx:key="id" bindtap="chooseMood" data-id="{{item.id}}">
+        <image class="mood-icon" src="{{item.icon}}" mode="aspectFit"></image>
+        <text class="mood-name">{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="section-title flex-row">
+      <text>近期记录</text>
+      <view class="more" bindtap="goToTrend">查看更多</view>
+    </view>
+    
+    <view wx:if="{{recentRecords.length > 0}}">
+      <view class="record-item" wx:for="{{recentRecords}}" wx:key="id" bindtap="viewDetail" data-index="{{index}}">
+        <view class="flex-row">
+          <image class="mood-icon-small" src="{{item.moodInfo.icon}}" mode="aspectFit"></image>
+          <view class="record-info">
+            <view class="record-mood">{{item.moodInfo.name}}</view>
+            <view class="datetime">{{item.date}}</view>
+          </view>
+        </view>
+        <view class="record-content" wx:if="{{item.content}}">
+          {{item.content}}
+        </view>
+      </view>
+    </view>
+    
+    <view wx:else class="empty-tip">
+      <image class="empty-icon" src="/images/icon/empty.png" mode="aspectFit"></image>
+      <text>暂无心情记录</text>
+    </view>
+  </view>
+</view> 

@@ -1,0 +1,80 @@
+<view class="container">
+  <view class="header">
+    <view class="title">心情趋势</view>
+    <view class="tab-switch">
+      <view class="{{showCalendar ? 'active' : ''}}" bindtap="toggleView">日历</view>
+      <view class="{{!showCalendar ? 'active' : ''}}" bindtap="toggleView">列表</view>
+    </view>
+  </view>
+  
+  <view class="card mood-summary">
+    <view class="section-title">心情统计</view>
+    <view wx:if="{{moodCounts.length > 0}}">
+      <view class="mood-stats">
+        <view class="mood-stat-item" wx:for="{{moodCounts}}" wx:key="id">
+          <view class="mood-stat-icon-wrapper mood-bg-{{item.id}}">
+            <image class="mood-stat-icon" src="{{item.icon}}" mode="aspectFit"></image>
+          </view>
+          <view class="mood-stat-info">
+            <view class="mood-stat-name">{{item.name}}</view>
+            <view class="mood-stat-count">{{item.count}}次</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:else class="empty-tip text-center">
+      <text>暂无心情记录</text>
+    </view>
+  </view>
+  
+  <view class="card" wx:if="{{showCalendar}}">
+    <view class="section-title">{{currentMonth}} 心情日历
+      <van-calendar
+        title="日历"
+        poppable="{{ false }}"
+        show-confirm="{{ false }}"
+        class="calendar"
+        color="#58adf5"
+        default-date="{{ defaultDate }}"
+        min-date="{{ minDate }}"
+        max-date="{{ maxDate }}"
+        formatter="{{ formatter }}"
+        row-height="60"
+        show-title="{{ false }}"
+        show-mark="{{ true }}"
+        first-day-of-week="{{ 0 }}"
+        bind:select="calendarSelect"
+        bind:confirm="calendarConfirm"
+        bind:unselect="calendarUnselect"
+        bind:month-show="calendarMonthShow"
+      />
+    </view>
+  </view>
+  
+  <view class="card" wx:else>
+    <view class="section-title">心情记录列表</view>
+    <view wx:if="{{moodRecords.length > 0}}">
+      <view class="record-item" wx:for="{{moodRecords}}" wx:key="id" bindtap="viewDetail" data-id="{{item.id}}">
+        <view class="flex-row">
+          <image class="mood-icon-small" src="{{item.moodInfo.icon}}" mode="aspectFit"></image>
+          <view class="record-info">
+            <view class="record-mood">{{item.moodInfo.name}}</view>
+            <view class="datetime">{{item.date}}</view>
+          </view>
+        </view>
+        <view class="record-content" wx:if="{{item.content}}">
+          {{item.content}}
+        </view>
+        <view class="activity-tags" wx:if="{{item.activities && item.activities.length > 0}}">
+          <view class="tag" wx:for="{{item.activities}}" wx:key="id" wx:for-item="activity">
+            {{activity.name}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:else class="empty-tip">
+      <image class="empty-icon" src="/images/icon/empty.png" mode="aspectFit"></image>
+      <text>暂无心情记录</text>
+    </view>
+  </view>
+</view> 

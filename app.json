@@ -1,0 +1,49 @@
+{
+	"pages": [
+		"pages/index/index",
+		"pages/record/record",
+		"pages/trend/trend",
+		"pages/my/my"
+	],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "每日心情记录",
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundColor": "#f8f8f8"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#58adf5",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icon/home.png",
+        "selectedIconPath": "images/icon/home_select.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/record/record",
+        "iconPath": "images/icon/record.png",
+        "selectedIconPath": "images/icon/record_select.png",
+        "text": "记录"
+      },
+      {
+        "pagePath": "pages/trend/trend",
+        "iconPath": "images/icon/trend.png",
+        "selectedIconPath": "images/icon/trend_select.png",
+        "text": "趋势"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "images/icon/my.png",
+        "selectedIconPath": "images/icon/my_select.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {
+     "van-calendar": "@vant/weapp/calendar/index"
+  }
+} 

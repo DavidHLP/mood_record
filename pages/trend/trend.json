@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "心情趋势",
+  "usingComponents": {
+    "van-calendar": "@vant/weapp/calendar/index"
+  }
+} 

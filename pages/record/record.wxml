@@ -1,0 +1,53 @@
+<wxs module="jstools" src="/utils/includes.wxs"></wxs>
+<view class="container">
+  <view class="card">
+    <view class="section-title">选择心情</view>
+    <view class="mood-grid">
+      <view class="mood-item {{selectedMoodId === item.id ? 'active' : ''}}" 
+            wx:for="{{moodList}}" 
+            wx:key="id" 
+            bindtap="{{isViewMode ? '' : 'selectMood'}}" 
+            data-id="{{item.id}}">
+        <image class="mood-icon" src="{{item.icon}}" mode="aspectFit"></image>
+        <text class="mood-name">{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="section-title">心情描述</view>
+    <textarea class="mood-textarea" 
+              placeholder="记录一下你此刻的想法和感受..." 
+              value="{{content}}" 
+              bindinput="inputContent"
+              disabled="{{isViewMode}}"></textarea>
+  </view>
+
+  <view class="card">
+    <view class="section-title">选择活动标签</view>
+    <view class="activity-list">
+      <view class="activity-item {{jstools.includes(selectedActivities, item.id) ? 'active' : ''}}"
+        wx:for="{{activities}}" 
+        wx:key="id" 
+        bindtap="{{isViewMode ? '' : 'toggleActivity'}}" 
+        data-id="{{item.id}}">
+        <image class="activity-icon" src="{{item.icon}}" mode="aspectFit"></image>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="datetime-row">
+    <text class="datetime-label">日期时间：</text>
+    <text>{{date}} {{time}}</text>
+  </view>
+
+  <view class="btn-area" wx:if="{{!isViewMode}}">
+    <button class="btn-default" bindtap="cancel">取消</button>
+    <button class="btn-primary" bindtap="saveRecord">保存</button>
+  </view>
+  
+  <view class="btn-area" wx:else>
+    <button class="btn-primary" bindtap="cancel">返回</button>
+  </view>
+</view> 

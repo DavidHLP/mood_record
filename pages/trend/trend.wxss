@@ -1,0 +1,220 @@
+/* trend.wxss */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+
+.title {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.tab-switch {
+  display: flex;
+  border-radius: 10rpx;
+  border: 1rpx solid #ddd;
+  overflow: hidden;
+}
+
+.tab-switch view {
+  padding: 10rpx 20rpx;
+  font-size: 26rpx;
+  background-color: #fff;
+  color: #666;
+}
+
+.tab-switch view.active {
+  background-color: #58adf5;
+  color: #fff;
+}
+
+.mood-stats {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20rpx;
+}
+
+.mood-stat-item {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  margin-bottom: 20rpx;
+}
+
+.mood-stat-icon-wrapper {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16rpx;
+}
+
+/* 心情背景颜色类 */
+.mood-bg-1 {
+  background-color: rgba(255, 215, 0, 0.5); /* 开心-金色 */
+}
+
+.mood-bg-2 {
+  background-color: rgba(135, 206, 235, 0.5); /* 平静-天蓝色 */
+}
+
+.mood-bg-3 {
+  background-color: rgba(169, 169, 169, 0.5); /* 低落-灰色 */
+}
+
+.mood-bg-4 {
+  background-color: rgba(255, 99, 71, 0.5); /* 愤怒-番茄红 */
+}
+
+.mood-bg-5 {
+  background-color: rgba(147, 112, 219, 0.5); /* 焦虑-紫色 */
+}
+
+.mood-bg-6 {
+  background-color: rgba(255, 105, 180, 0.5); /* 惊喜-粉色 */
+}
+
+.mood-stat-icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.mood-stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.mood-stat-name {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.mood-stat-count {
+  font-size: 24rpx;
+  color: #999;
+}
+
+/* 日历相关样式 */
+.calendar {
+  width: 100%;
+  padding-bottom: 20rpx;
+}
+
+/* 在van-calendar组件上应用自定义样式 */
+.calendar .van-calendar__top-info {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.calendar .van-calendar__bottom-info {
+  font-size: 20rpx;
+  color: #666;
+}
+
+.record-item {
+  padding: 24rpx;
+  margin: 16rpx 0;
+  border-radius: 12rpx;
+  background: #ffffff;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.record-item:active {
+  transform: scale(0.98);
+}
+
+.record-item:last-child {
+  margin-bottom: 0;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.mood-icon-small {
+  width: 72rpx;
+  height: 72rpx;
+  margin-right: 24rpx;
+  flex-shrink: 0;
+  border-radius: 50%;
+  padding: 8rpx;
+  background: #f8f8f8;
+  transition: all 0.3s ease;
+}
+
+.record-info {
+  flex: 1;
+}
+
+.record-mood {
+  font-size: 30rpx;
+  color: #333333;
+  font-weight: 500;
+  margin-bottom: 8rpx;
+}
+
+.datetime {
+  font-size: 24rpx;
+  color: #999999;
+  display: flex;
+  align-items: center;
+}
+
+.record-content {
+  font-size: 28rpx;
+  color: #666666;
+  margin: 16rpx 0 16rpx 96rpx;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.activity-tags {
+  margin-left: 96rpx;
+  margin-top: 12rpx;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6rpx 16rpx;
+  font-size: 24rpx;
+  border-radius: 24rpx;
+  background-color: #f0f7ff;
+  color: #58adf5;
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+
+.tag:active {
+  transform: scale(0.95);
+}
+
+.empty-tip {
+  text-align: center;
+  padding: 60rpx 0;
+  color: #999999;
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-icon {
+  width: 180rpx;
+  height: 180rpx;
+  margin-bottom: 24rpx;
+  opacity: 0.8;
+} 

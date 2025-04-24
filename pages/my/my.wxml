@@ -1,0 +1,60 @@
+<view class="container">
+  <!-- 用户信息 -->
+  <view class="user-info-card">
+    <view class="user-info" wx:if="{{hasUserInfo}}">
+      <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+      <text class="nickname">{{userInfo.nickName}}</text>
+    </view>
+    <view class="user-info" wx:else>
+      <view class="avatar-placeholder"></view>
+      <button class="login-btn" bindtap="getUserProfile">点击登录</button>
+    </view>
+    <view class="user-stats">
+      <view class="stat-item">
+        <text class="stat-number">{{recordCount}}</text>
+        <text class="stat-label">心情记录</text>
+      </view>
+    </view>
+  </view>
+  
+  <!-- 设置列表 -->
+  <view class="card settings-card">
+    <view class="section-title">设置</view>
+    
+    <view class="settings-item">
+      <view class="settings-left">
+        <image class="settings-icon" src="/images/icon/remind.png" mode="aspectFit"></image>
+        <text>每日提醒</text>
+      </view>
+      <switch color="#58adf5" checked="{{remindEnabled}}" bindchange="toggleRemind"></switch>
+    </view>
+    
+    <view class="settings-item" bindtap="clearData">
+      <view class="settings-left">
+        <image class="settings-icon" src="/images/icon/clear.png" mode="aspectFit"></image>
+        <text>清除数据</text>
+      </view>
+      <image class="arrow-icon" src="/images/icon/arrow.png" mode="aspectFit"></image>
+    </view>
+    
+    <view class="settings-item" bindtap="showAbout">
+      <view class="settings-left">
+        <image class="settings-icon" src="/images/icon/about.png" mode="aspectFit"></image>
+        <text>关于我们</text>
+      </view>
+      <image class="arrow-icon" src="/images/icon/arrow.png" mode="aspectFit"></image>
+    </view>
+    
+    <view class="settings-item" bindtap="feedback">
+      <view class="settings-left">
+        <image class="settings-icon" src="/images/icon/feedback.png" mode="aspectFit"></image>
+        <text>意见反馈</text>
+      </view>
+      <image class="arrow-icon" src="/images/icon/arrow.png" mode="aspectFit"></image>
+    </view>
+  </view>
+  
+  <view class="footer">
+    <text>每日心情记录 v1.0.0</text>
+  </view>
+</view> 

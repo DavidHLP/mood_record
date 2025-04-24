@@ -1,0 +1,118 @@
+/* my.wxss */
+.user-info-card {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 12rpx;
+  box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.05);
+  margin-bottom: 20rpx;
+  padding: 40rpx 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+
+.avatar {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  margin-bottom: 20rpx;
+}
+
+.avatar-placeholder {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  margin-bottom: 20rpx;
+}
+
+.nickname {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #333;
+}
+
+.login-btn {
+  background: none;
+  border: none;
+  font-size: 32rpx;
+  color: #58adf5;
+  padding: 0;
+  line-height: 1;
+}
+
+.login-btn::after {
+  border: none;
+}
+
+.user-stats {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 40rpx;
+}
+
+.stat-number {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.stat-label {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.settings-card {
+  padding-bottom: 10rpx;
+}
+
+.settings-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid #eee;
+}
+
+.settings-item:last-child {
+  border-bottom: none;
+}
+
+.settings-left {
+  display: flex;
+  align-items: center;
+}
+
+.settings-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+
+.arrow-icon {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.footer {
+  margin-top: 60rpx;
+  text-align: center;
+  color: #999;
+  font-size: 24rpx;
+} 
