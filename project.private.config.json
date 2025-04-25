@@ -3,7 +3,8 @@
   "projectname": "mood_record",
   "setting": {
     "compileHotReLoad": true,
-    "urlCheck": false
+    "urlCheck": false,
+    "skylineRenderEnable": true
   },
   "libVersion": "3.7.12"
 }

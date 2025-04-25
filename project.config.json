@@ -9,7 +9,7 @@
   "setting": {
     "coverView": true,
     "es6": true,
-    "postcss": true,
+    "postcss": false,
     "minified": true,
     "enhance": true,
     "showShadowRootInWxmlPanel": true,
@@ -19,7 +19,8 @@
       "disablePlugins": [],
       "outputPath": ""
     },
-    "swc": true
+    "swc": true,
+    "minifyWXML": false
   },
   "condition": {},
   "editorSetting": {

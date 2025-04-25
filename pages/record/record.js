@@ -127,6 +127,13 @@ Page({
     // 保存记录
     app.saveMoodRecord(record);
     
+    // 清理所有选择
+    this.setData({
+      selectedMoodId: null,
+      selectedActivities: [],
+      content: ''
+    });
+    
     wx.showToast({
       title: '记录成功',
       icon: 'success',

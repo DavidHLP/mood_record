@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@lspriv/wx-calendar": "^1.8.4",
-    "@vant/weapp": "^1.11.7"
+    "@vant/weapp": "^1.11.7",
+    "echarts-for-weixin": "^1.0.2"
   }
 }

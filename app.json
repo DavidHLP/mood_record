@@ -44,6 +44,7 @@
     ]
   },
   "usingComponents": {
-     "van-calendar": "@vant/weapp/calendar/index"
+     "van-calendar": "@vant/weapp/calendar/index",
+     "ec-canvas": "echarts-for-weixin/index"
   }
 } 
