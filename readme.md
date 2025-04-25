@@ -195,7 +195,30 @@ classDiagram
 - [ ] 支持自定义心情和活动类型
 
 ## 项目截图
-*（项目截图将在发布时添加）*
+
+### 首页
+
+![](./md-image/index.png)
+
+### 记录
+
+![](./md-image/record.png)
+
+
+### 趋势
+
+- 日历显示
+
+![](./md-image/trend1.png)
+
+- 列表显示
+
+![](./md-image/trend2.png)
+
+### 我的
+
+![](./md-image/my.png)
 
 ## 联系方式
+
 如有任何问题或建议，欢迎提交Issue或联系开发者。
